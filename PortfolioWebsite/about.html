@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website showcasing coding projects and resume information">
+  <title>Braden Davis Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header>
+  <h1>Braden C Davis</h1>
+  <p>Full-Stack Developer | Problem Solver | Ambitious</p>
+  <a href="index.html" class="btn">Home</a>
+  <a href="projects.html" class="btn">View My Projects</a>
+  <a href="about.html" class="btn">More of Me</a>
+</header>
+
+<div class="tabs">
+  <button class="tablink" onclick="openTab(event, 'Bookshelf')" id="defaultOpen">Bookshelf</button>
+  <button class="tablink" onclick="openTab(event, 'Photography')" id="defaultOpen">Photography</button>
+</div>
+
+<div id="Bookshelf" class="tabcontent">
+  <h2>Bookshelf</h2>
+  <div class="book-container"> 
+    <div class="book-details">
+      <p class="subheader">Don't Believe Everything You Think</p>
+      <p style="color: rgba(100, 102, 102, 0.35)">Currently Reading</p>
+      <p class="author">By Joseph Nguyen</p>
+      <img src="images/dontbelieveeverythingyouthink.jpg" alt="Don't Believe Everything You Think. By Joseph Nguyen" class="book-cover">
+    </div>
+    <div class="book-description">
+      <p>
+        I started to read this book in August of 2024. Nguyen talks about our mind and how our thoughts are not our realities.
+        It covers how we as humans do not suffer because of the things that happen to us, we suffer because of how we perceive
+        those things. So far, it's an extremely powerful read and has gifted me with one of my favorite quotes at the moment:
+      </p>
+      <br>
+      <p style="text-indent: 30px;">
+        "I think and think and think, I've thought myself out of happiness a million times, but never once into it." - Jonathan Safran Foer
+      </p>
+    </div>
+  </div>
+
+  <div class="book-container">
+    <div class="book-details">
+      <p class="subheader">The Power of Now</p>
+      <p class="author">By Eckhart Tolle</p>
+      <img src="images/powerofnow.jpg" alt="The Power of Now. By Eckhart Tolle" class="book-cover">
+    </div>
+    <div class="book-description">
+      <p>
+        <a style="font-style: italic;">The Power of Now</a> is a book with a copious amount of great information. It was truly one of those reads
+        where I constantly thought about the fact that I was getting all of this information in a few months when the author likely spent
+        much of his life discovering these truths. This book, a lot like <a style="font-style: italic">Don't Believe Everything You Think</a>,
+        dives deep into the inner workings of the human mind. Since reading this, I always try to live in the present moment and do my best
+        to limit my short-term desires that will not help me to live a happy life.
+      </p>
+    </div>
+</div>
+
+<div class="book-container">
+  <div class="book-details">
+    <p class="subheader">Letters to My Former Self</p>
+    <p class="author">By Temote Matsu</p>
+    <img src="images/letterstomyformerself.jpg" alt="Letters to My Former Self. By Temote Matsu" class="book-cover">
+  </div>
+  <div class="book-description">
+    <p>
+      <a style="font-style: italic">Letters to My Former Self</a> is a "straight-shooter" kind of book. There is no beating around the bush.
+      Matsu tells you how it is. It gives you some hard truths, such as, <a style="font-style: italic">you are owed nothing, you act too emotionally,
+      you are the cause of all of your troubles,</a> and so much more. Matsu covers the deep stuff like purpose in life and then the not-so-deep stuff
+      like, <a style="font-style: italic">stop talking over people in conversation</a>. It is a pretty short book and I read it in one sitting,
+      but it has so much information that I find myself revisiting constantly.
+    </p>
+  </div>
+</div>
+</div>
+
+<div id="Photography" class="tabcontent">
+  <h2>Photography</h2>
+  <h3 style="text-align: center; font-style: italic;">
+    Here are some of my favorite pictures, taken by me!
+  </h3>
+  <div class="photo-grid">
+    <img class="photo-container-left left" src="images/IMG_0334.JPG" alt="evergreen branch">
+    <img class="photo-container-right right" src="images/IMG_0141.JPG" alt="purple flower">
+    <img class="photo-container-left left" src="images/IMG_0739.JPG" alt="tree trunk up close">
+    <img class="photo-container-right right" src="images/IMG_0217.JPG" alt="low perspective of autumn tree">
+  </div>
+</div>
+</div>
+
+
+<footer>
+    <p>&copy; 2024 Braden C Davis. All Rights Reserved.</p>
+  </footer>
+  
+
+<script>
+  function openTab(evt, tabName) {
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    var tablinks = document.getElementsByClassName("tablink");
+    for (var i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("defaultOpen").click();
+</script>
+
+
+  </body>
+  </html>
