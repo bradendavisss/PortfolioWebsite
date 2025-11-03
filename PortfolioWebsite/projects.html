@@ -39,9 +39,9 @@
   
   <div class="project-item">
     <div class="project-text">
-      <h3>Stock Ranking Model (work in progress)</h3>
-      <p>The project that I am currently working on is a stock ranking app that will reactively pull in stock data from Yahoo Finance and rank them 
-        based on a custom scoring model. I want to make this model be customized for a typical college student and might look into customizable rankings as well.
+      <h3>Personal Finance APp</h3>
+      <p>The project that I am currently working on is a personal finance app designed specifically for college students who want to learn to become financially literate.
+        Investing and saving is a very important skill to teach kids, and I want to make it easier for them. With this app, I can do that.
       </p>
     </div>
   </div>
@@ -93,44 +93,17 @@
 
 
 <footer>
-  <p>&copy; 2024 Braden C Davis. All Rights Reserved.</p>
+  <p>&copy; 2025 Braden C Davis. All Rights Reserved.</p>
 </footer>
 
-<!-- popup image -->
+<!-- Modal for image popup! -->
 <div id="imageModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="modalImage">
   <div id="caption"></div>
 </div>
 
-<script>
-  // get modal element
-  var modal = document.getElementById("imageModal");
-
-  // get the image and modal image element
-  var modalImg = document.getElementById("modalImage");
-  var captionText = document.getElementById("caption");
-
-  // get all images with the class "project-image"
-  var images = document.querySelectorAll('.project-image');
-
-  // iterate through each image
-  images.forEach(function(image) {
-    image.onclick = function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    }
-  });
-
-  // get the close element
-  var closeButton = document.getElementsByClassName("close")[0];
-
-  // close modal when close button is clicked
-  closeButton.onclick = function() {
-    modal.style.display = "none";
-  }
-</script>
+<script src="popup.js" defer></script>
 
 </body>
 </html>

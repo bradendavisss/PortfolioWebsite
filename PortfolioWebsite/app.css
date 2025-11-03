@@ -296,40 +296,73 @@
 }
 
 .skills {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
   margin: 30px auto;
   width: 80%;
-  display: flex;
-  justify-content: space-between; /* space out the columns */
-  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "top top"
+    "left right";
+  gap: 18px;
+  padding: 22px;
+  align-items: start;
 }
 
-.skills-left, .skills-right {
-  width: 48%;
-}
-
-.skills-content {
-  font-weight: bold;
-  padding: 10px;
+.skills-top {
+  grid-area: top;
   display: flex;
-  justify-content: space-between; /* space btwn text and image */
+  justify-content: center;
   align-items: center;
 }
 
-.skill-text {
-  margin-left: 5px;
-}
-  
-.skill-subtext {
-  color: rgba(12, 35, 64, 0.70);
+.skills-left { grid-area: left; display:flex; flex-direction:column; gap:12px; }
+.skills-right { grid-area: right; display:flex; flex-direction:column; gap:12px; }
+
+.skills-content {
+  font-weight: 600;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between; /* text on left, logo on right */
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(12,35,64,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.skill-logo {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-  vertical-align: middle;
+.skills-content:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(12,35,64,0.08); }
+
+/* Skill text block: stack name and level */
+.skill-info { display:flex; flex-direction:column; gap:4px; }
+.skill-text { font-size:18px; margin:0; }
+.skill-subtext { font-size:13px; margin:0; color: rgba(12,35,64,0.6); font-weight:500; }
+
+.skill-logo { width:56px; height:auto; margin-left:16px; }
+
+.skills-top .skills-content { max-width:480px; width:100%; }
+
+@media (max-width: 700px) {
+  .skills { grid-template-columns: 1fr; grid-template-areas: "top" "left" "right"; }
+  .skills-left, .skills-right { width:100%; }
+  .skills-content { padding: 10px 12px; }
+  .skill-logo { width:44px; }
+}
+
+.certification {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+  margin: 25px;
 }
 
 .contact h2 {

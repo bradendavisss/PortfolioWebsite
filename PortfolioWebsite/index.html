@@ -12,7 +12,7 @@
 
 <header>
   <h1>Braden C Davis</h1>
-  <p>Full-Stack Developer | Problem Solver | Ambitious</p>
+  <p>Developer | Problem Solver | Ambitious</p>
   <a href="index.html" class="btn">Home</a>
   <a href="projects.html" class="btn">View My Projects</a>
   <a href="about.html" class="btn">More of Me</a>
@@ -28,10 +28,8 @@
       so, get to know me more on here!
     </p>
     <p>
-      I grew up in a town called Wheaton, Illinois. Nowadays, I am a third-year Computer Science/Cyber Security student
-      (along with a minor in Finance) at Xavier Unviersity in Cincinnati, Ohio. Since I was little,
-      I have always been fascinated with the inner workings of technology, and that fascination led me to my current passion of 
-      software development. Check out my <a href="projects.html" target="_blank">projects</a>. In the near future, I plan on learning more about machine learning.
+      I grew up in a town called Wheaton, Illinois. Nowadays, I am a third-year Computer Science/Cyber Security and Finance student at Xavier University in Cincinnati, Ohio. Since I was little,
+      I have always been fascinated with the inner workings of technology. I am most passionate about the intersection of that technology and finance. Check out my <a href="projects.html" target="_blank">projects</a>
     </p>
     <p>
       Naturally, because I think about the inner workings of technology, I often think about the inner workings
@@ -60,15 +58,24 @@
       <section class="intro">
         <h1>Skills</h1>
         <div class="skills">
+          <div class="skills-top"> <!-- full-width top row for odd skill -->
+            <div class="skills-content">
+              <div class="skill-info">
+                <h2 class="skill-text">R</h2>
+                <p class="skill-subtext">Beginner</p>
+              </div>
+              <img src="images/r.png" alt="R Logo" class="skill-logo">
+            </div>
+          </div>
           <div class="skills-left"> <!-- left column -->
             <div class="skills-content">
-              <h2 class="skill-text">Java</h2>
-              <p class="skill-subtext">Moderate</p>
-              <img src="images/java.png" alt="Java Logo" class="skill-logo">
+              <h2 class="skill-text">Javascript</h2>
+              <p class="skill-subtext">Experienced</p>
+              <img src="images/javascript.png" alt="Javascript Logo" class="skill-logo">
             </div>
             <div class="skills-content">
               <h2 class="skill-text">C#</h2>
-              <p class="skill-subtext">Moderate</p>
+              <p class="skill-subtext">Experienced</p>
               <img src="images/csharp.svg" alt="C# Logo" class="skill-logo">
             </div>
             <div class="skills-content">
@@ -94,10 +101,20 @@
               <img src="images/python.png" alt="Python Logo" class="skill-logo">
             </div>
           </div>
+          </div>
         </div>
       </section>
     </div>
-    
+
+    <div class="container">
+      <section class="intro">
+        <h1>Certifications</h1>
+        <div class="skills">
+          <h2 class="certification-header">Entry-Level Javascript Programmer</h2>
+            <div class="project-image-container">
+          <img src="images/js1-certification.png" alt="JS certification" class="project-image">
+          </div>
+        </div>
     
     
 
@@ -107,13 +124,21 @@
     <p>Personal Email: braden.davis621@gmail.com</p>
     <p>Phone: 630-542-3535</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/bradendaviss/" target="_blank">linkedin.com/in/bradendaviss/</a></p>
-    <p>GitHub: <a href="https://github.com/yourgithub" target="_blank"></a></p>
   </section>
 </div>
 
 <footer>
-  <p>&copy; 2024 Braden C Davis. All Rights Reserved.</p>
+  <p>&copy; 2025 Braden C Davis. All Rights Reserved.</p>
 </footer>
+
+<!-- Modal for image popup! -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="caption"></div>
+</div>
+
+<script src="popup.js" defer></script>
 
 </body>
 </html>
